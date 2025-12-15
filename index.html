@@ -1,0 +1,763 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Frontend Sprint — курс, который превращает в разработчика</title>
+  <meta name="description" content="Стань Frontend-разработчиком за 12 недель: практика, менторство, портфолио. Запись на поток." />
+
+  <!-- Fonts (можно заменить на любые) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <!-- Ambient background layers -->
+  <div class="bg" aria-hidden="true">
+    <div class="bg__radial bg__radial--a"></div>
+    <div class="bg__radial bg__radial--b"></div>
+    <div class="bg__radial bg__radial--c"></div>
+    <div class="bg__grid"></div>
+    <div class="bg__noise"></div>
+  </div>
+
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="#top" aria-label="Frontend Sprint">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span class="brand__text">
+          <span class="brand__name">Frontend Sprint</span>
+          <span class="brand__tag">Практика → портфолио → оффер</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Навигация">
+        <a class="nav__link" href="#about">О курсе</a>
+        <a class="nav__link" href="#benefits">Что получишь</a>
+        <a class="nav__link" href="#program">Программа</a>
+        <a class="nav__link" href="#works">Работы</a>
+        <a class="nav__link" href="#pricing">Стоимость</a>
+        <a class="nav__link" href="#faq">FAQ</a>
+      </nav>
+
+      <div class="topbar__actions">
+        <button class="btn btn--ghost" data-modal="program">Скачать программу</button>
+        <button class="btn btn--primary" data-modal="apply">Записаться</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <div class="pill-row">
+            <span class="pill pill--glow">Новый поток: старт через 2 недели</span>
+            <span class="pill">12 недель</span>
+            <span class="pill">3 проекта</span>
+            <span class="pill">Менторство</span>
+          </div>
+
+          <h1 class="hero__title">
+            Стань
+            <span class="txt-grad">Frontend-разработчиком</span>
+            <span class="txt-outline">и собери портфолио</span>
+            за 12 недель
+          </h1>
+
+          <p class="hero__lead">
+            Без воды. Без хаоса. Только практика, код-ревью и проекты, которые не стыдно показать.
+            Сверстаешь лендинг, соберёшь UI-kit, сделаешь React-приложение и оформим GitHub как витрину.
+          </p>
+
+          <div class="hero__cta">
+            <button class="btn btn--primary btn--xl" data-modal="apply">
+              Записаться на поток
+              <span class="btn__hint">ответим за ~15 минут</span>
+            </button>
+
+            <div class="hero__trust">
+              <div class="trust-chip">
+                <span class="trust-chip__dot" aria-hidden="true"></span>
+                <span>Код-ревью от ментора</span>
+              </div>
+              <div class="trust-chip">
+                <span class="trust-chip__dot" aria-hidden="true"></span>
+                <span>Портфолио: 3 проекта</span>
+              </div>
+              <div class="trust-chip">
+                <span class="trust-chip__dot" aria-hidden="true"></span>
+                <span>Карьерный трек и собесы</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero__micro">
+            <div class="micro">
+              <div class="micro__kpi">4.9</div>
+              <div class="micro__txt">Средняя оценка<br>по отзывам</div>
+            </div>
+            <div class="micro">
+              <div class="micro__kpi">1:1</div>
+              <div class="micro__txt">Разборы задач<br>в мини-группах</div>
+            </div>
+            <div class="micro">
+              <div class="micro__kpi">∞</div>
+              <div class="micro__txt">Доступ к материалам<br>после обучения</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__visual" aria-label="Визуальный блок">
+          <div class="stack">
+            <div class="stack__card stack__card--top">
+              <div class="card-head">
+                <div class="card-head__left">
+                  <span class="chip chip--hot">LIVE</span>
+                  <span class="chip">Код-ревью</span>
+                </div>
+                <span class="chip chip--muted">PR #1: доверие</span>
+              </div>
+
+              <div class="code-preview" role="img" aria-label="Превью кода">
+                <div class="code-preview__line"><span class="cmt">// Landing CTA hierarchy</span></div>
+                <div class="code-preview__line"><span class="kw">const</span> <span class="id">cta</span> = <span class="fn">focus</span>(<span class="str">"primary"</span>);</div>
+                <div class="code-preview__line"><span class="kw">if</span> (<span class="id">noise</span> &gt; <span class="num">0</span>) <span class="fn">remove</span>(<span class="str">"decor"</span>);</div>
+                <div class="code-preview__line"><span class="fn">add</span>(<span class="str">"whitespace"</span>);</div>
+              </div>
+
+              <div class="card-foot">
+                <div class="metric">
+                  <div class="metric__label">Время до CTA</div>
+                  <div class="metric__value">~1.0 сек</div>
+                </div>
+                <div class="metric">
+                  <div class="metric__label">Нагрузка</div>
+                  <div class="metric__value">низкая</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="stack__card stack__card--mid">
+              <div class="mono-title">Проект #2</div>
+              <div class="bigline">UI-kit + компонентная библиотека</div>
+              <div class="mini-grid">
+                <div class="mini-swatch"></div>
+                <div class="mini-swatch"></div>
+                <div class="mini-swatch"></div>
+                <div class="mini-swatch"></div>
+              </div>
+            </div>
+
+            <div class="stack__card stack__card--back">
+              <div class="burst" aria-hidden="true"></div>
+              <div class="backcopy">
+                <div class="backcopy__title">Ты не “учишься”</div>
+                <div class="backcopy__text">Ты собираешь продукт, который продаёт тебя рынку.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero__accent" aria-hidden="true">
+            <div class="accent__ring"></div>
+            <div class="accent__spark"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT / FOR WHO -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="h2">
+            Для кого курс — и почему он
+            <span class="txt-grad">не разваливается</span>
+            на “кучу тем”
+          </h2>
+          <p class="sub">
+            Сначала — каркас навыка. Потом — проекты. В каждом блоке есть опорные паттерны UX и места,
+            где мы осознанно их нарушаем ради эффекта (но без потери понятности).
+          </p>
+        </div>
+
+        <div class="cards-3">
+          <article class="card card--glass">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" class="ic">
+                <path d="M4 7h16M7 4h10M6 20h12M9 17h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="h3">С нуля — но с головой</h3>
+            <p class="p">
+              Если слова вроде “React” звучат страшно — ок. Мы объясняем просто, а сложность растёт
+              только вместе с практикой.
+            </p>
+            <div class="tagrow">
+              <span class="tag">порог входа</span>
+              <span class="tag">структура</span>
+              <span class="tag">поддержка</span>
+            </div>
+          </article>
+
+          <article class="card card--glass">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" class="ic">
+                <path d="M7 7h10v10H7z" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M4 12h3M17 12h3M12 4v3M12 17v3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="h3">Есть база — нужен рывок</h3>
+            <p class="p">
+              Ускорим: компонентное мышление, архитектура, чистый UI, git-процессы и скорость сборки проектов.
+            </p>
+            <div class="tagrow">
+              <span class="tag">UI-система</span>
+              <span class="tag">архитектура</span>
+              <span class="tag">скорость</span>
+            </div>
+          </article>
+
+          <article class="card card--glass">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" class="ic">
+                <path d="M8 12l3 3 5-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M5 6h14v12H5z" stroke="currentColor" stroke-width="1.6"/>
+              </svg>
+            </div>
+            <h3 class="h3">Нужен результат на рынке</h3>
+            <p class="p">
+              Портфолио, GitHub, собес-чеклисты и “упаковка”. Мы делаем так, чтобы ты выглядел как разработчик.
+            </p>
+            <div class="tagrow">
+              <span class="tag">портфолио</span>
+              <span class="tag">карьера</span>
+              <span class="tag">упаковка</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFITS -->
+    <section id="benefits" class="section section--dense">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="h2">
+            Что ты получишь — <span class="txt-outline">в цифрах</span> и конкретике
+          </h2>
+          <p class="sub">
+            Никаких “станешь успешным”. Только измеримые артефакты, которые можно открыть и показать.
+          </p>
+        </div>
+
+        <div class="benefits-grid">
+          <article class="bcard">
+            <div class="bcard__top">
+              <span class="bcard__kpi">3</span>
+              <span class="bcard__label">проекта</span>
+            </div>
+            <div class="bcard__text">Лендинг, UI-kit, React-приложение.</div>
+          </article>
+
+          <article class="bcard">
+            <div class="bcard__top">
+              <span class="bcard__kpi">12</span>
+              <span class="bcard__label">недель</span>
+            </div>
+            <div class="bcard__text">Понятный маршрут без перегруза и метаний.</div>
+          </article>
+
+          <article class="bcard">
+            <div class="bcard__top">
+              <span class="bcard__kpi">1:1</span>
+              <span class="bcard__label">разбор</span>
+            </div>
+            <div class="bcard__text">Сильные места усиливаем, слабые — точечно закрываем.</div>
+          </article>
+
+          <article class="bcard bcard--glow">
+            <div class="bcard__top">
+              <span class="bcard__kpi">∞</span>
+              <span class="bcard__label">доступ</span>
+            </div>
+            <div class="bcard__text">Материалы и шаблоны остаются с тобой.</div>
+          </article>
+
+          <article class="bcard">
+            <div class="bcard__top">
+              <span class="bcard__kpi">0</span>
+              <span class="bcard__label">воды</span>
+            </div>
+            <div class="bcard__text">Только то, что используется в задачах и в проектах.</div>
+          </article>
+
+          <article class="bcard">
+            <div class="bcard__top">
+              <span class="bcard__kpi">100%</span>
+              <span class="bcard__label">фокус</span>
+            </div>
+            <div class="bcard__text">Иерархия, воздух, понятная композиция — как в хорошем промо-экране.</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ART PAUSE (pattern break) -->
+    <section class="artbreak" aria-label="Арт-экран пауза">
+      <div class="container artbreak__inner">
+        <div class="artbreak__stamp">Пауза</div>
+        <div class="artbreak__copy">
+          <div class="artbreak__line">Код — это не магия.</div>
+          <div class="artbreak__line artbreak__line--grad">Это навык, который продаёт тебя.</div>
+          <div class="artbreak__small">Скрольнь дальше → программа и проекты</div>
+        </div>
+        <div class="artbreak__orb" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- PROGRAM -->
+    <section id="program" class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="h2">Программа: <span class="txt-grad">12 недель</span> без хаоса</h2>
+          <p class="sub">
+            В каждом блоке — результат, который можно показать: коммит, компонент, экран, проект.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <div class="trow">
+            <div class="tweek"><span class="tweek__n">01–02</span><span class="tweek__cap">Недели</span></div>
+            <div class="tcard">
+              <div class="tcard__title">Каркас: HTML, CSS, семантика, композиция</div>
+              <div class="tcard__desc">Типографика, иерархия, сетка, чистый UI. Собираем первый промо-экран.</div>
+              <div class="tcard__tags">
+                <span class="tag">figure/ground</span><span class="tag">whitespace</span><span class="tag">CTA</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="trow">
+            <div class="tweek"><span class="tweek__n">03–04</span><span class="tweek__cap">Недели</span></div>
+            <div class="tcard">
+              <div class="tcard__title">Компоненты UI: кнопки, карточки, формы</div>
+              <div class="tcard__desc">Собираем UI-kit как систему. Учимся делать “дорого” без лишнего шума.</div>
+              <div class="tcard__tags">
+                <span class="tag">glass</span><span class="tag">контраст</span><span class="tag">ритм</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="trow">
+            <div class="tweek"><span class="tweek__n">05–06</span><span class="tweek__cap">Недели</span></div>
+            <div class="tcard">
+              <div class="tcard__title">JavaScript: логика и интерфейс</div>
+              <div class="tcard__desc">События, состояние, валидация, маленькие интерактивы (без цирка).</div>
+              <div class="tcard__tags">
+                <span class="tag">state</span><span class="tag">UX</span><span class="tag">скорость</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="trow">
+            <div class="tweek"><span class="tweek__n">07–08</span><span class="tweek__cap">Недели</span></div>
+            <div class="tcard">
+              <div class="tcard__title">React: компоненты и структура приложения</div>
+              <div class="tcard__desc">Собираем приложение, прокачиваем мышление “как у разработчика”.</div>
+              <div class="tcard__tags">
+                <span class="tag">components</span><span class="tag">architecture</span><span class="tag">clean</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="trow">
+            <div class="tweek"><span class="tweek__n">09–12</span><span class="tweek__cap">Недели</span></div>
+            <div class="tcard tcard--accent">
+              <div class="tcard__title">Проекты + упаковка + собес-трек</div>
+              <div class="tcard__desc">Финализируем 3 проекта, оформляем GitHub, репетируем собеседования.</div>
+              <div class="tcard__tags">
+                <span class="tag">portfolio</span><span class="tag">github</span><span class="tag">interview</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section__foot">
+          <button class="btn btn--ghost btn--lg" data-modal="program">
+            Скачать полную программу (PDF)
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORKS -->
+    <section id="works" class="section section--dense">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="h2">Работы студентов: <span class="txt-outline">смотри как выглядит “готовый”</span></h2>
+          <p class="sub">
+            Это макеты-в-коде: чистая типографика, сильная иерархия и аккуратная визуальная “дороговизна”.
+          </p>
+        </div>
+
+        <div class="works">
+          <article class="work">
+            <div class="work__thumb work__thumb--a" aria-hidden="true"></div>
+            <div class="work__body">
+              <div class="work__title">Promo Landing</div>
+              <div class="work__desc">Первый экран + выгоды + CTA. Фокус на конверсии.</div>
+              <div class="tagrow">
+                <span class="tag">иерархия</span><span class="tag">воздух</span><span class="tag">контраст</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="work">
+            <div class="work__thumb work__thumb--b" aria-hidden="true"></div>
+            <div class="work__body">
+              <div class="work__title">UI-Kit System</div>
+              <div class="work__desc">Кнопки, карточки, формы. Единый стиль.</div>
+              <div class="tagrow">
+                <span class="tag">система</span><span class="tag">ритм</span><span class="tag">сеткa</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="work">
+            <div class="work__thumb work__thumb--c" aria-hidden="true"></div>
+            <div class="work__body">
+              <div class="work__title">React App</div>
+              <div class="work__desc">Состояние, компоненты, логика. Аккуратный UX.</div>
+              <div class="tagrow">
+                <span class="tag">React</span><span class="tag">UX</span><span class="tag">чистота</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="work">
+            <div class="work__thumb work__thumb--d" aria-hidden="true"></div>
+            <div class="work__body">
+              <div class="work__title">Brand Page</div>
+              <div class="work__desc">Арт-экран и осознанное нарушение паттерна.</div>
+              <div class="tagrow">
+                <span class="tag">pattern break</span><span class="tag">нейроэстетика</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="work">
+            <div class="work__thumb work__thumb--e" aria-hidden="true"></div>
+            <div class="work__body">
+              <div class="work__title">Case Page</div>
+              <div class="work__desc">Подача проекта + “как думали” + результаты.</div>
+              <div class="tagrow">
+                <span class="tag">story</span><span class="tag">доверие</span><span class="tag">структура</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="work">
+            <div class="work__thumb work__thumb--f" aria-hidden="true"></div>
+            <div class="work__body">
+              <div class="work__title">Interview Kit</div>
+              <div class="work__desc">Шаблоны, чек-листы, упаковка профиля.</div>
+              <div class="tagrow">
+                <span class="tag">карьера</span><span class="tag">упаковка</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENTORS -->
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="h2">Менторы: <span class="txt-grad">люди, которые доводят до результата</span></h2>
+          <p class="sub">
+            Портреты + короткие обещания — это доверие. Без “легенд” и лишних слов.
+          </p>
+        </div>
+
+        <div class="mentors">
+          <article class="mentor">
+            <div class="avatar avatar--a" aria-hidden="true"></div>
+            <div class="mentor__body">
+              <div class="mentor__name">Алексей, Frontend Lead</div>
+              <div class="mentor__meta">8+ лет • продуктовые команды • code review</div>
+              <div class="mentor__quote">“Сделаем так, чтобы твой код можно было показывать.”</div>
+            </div>
+          </article>
+
+          <article class="mentor">
+            <div class="avatar avatar--b" aria-hidden="true"></div>
+            <div class="mentor__body">
+              <div class="mentor__name">Мария, UI Engineer</div>
+              <div class="mentor__meta">дизайн-системы • типографика • UI-ритм</div>
+              <div class="mentor__quote">“Дорого — это не декор. Это порядок и контраст.”</div>
+            </div>
+          </article>
+
+          <article class="mentor">
+            <div class="avatar avatar--c" aria-hidden="true"></div>
+            <div class="mentor__body">
+              <div class="mentor__name">Илья, React Developer</div>
+              <div class="mentor__meta">React • архитектура • состояние</div>
+              <div class="mentor__quote">“Компоненты — это мышление, а не библиотека.”</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="section section--dense">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="h2">Отзывы: <span class="txt-outline">коротко, по делу</span></h2>
+          <p class="sub">Вместо “всё понравилось” — что именно стало лучше.</p>
+        </div>
+
+        <div class="reviews">
+          <article class="review">
+            <div class="review__top">
+              <div class="review__who">
+                <div class="review__ava" aria-hidden="true"></div>
+                <div>
+                  <div class="review__name">Егор</div>
+                  <div class="review__role">джун • смена сферы</div>
+                </div>
+              </div>
+              <div class="review__rate">★★★★★</div>
+            </div>
+            <p class="review__text">Появилась структура: что делать, зачем и как проверять. GitHub перестал быть кладбищем.</p>
+          </article>
+
+          <article class="review">
+            <div class="review__top">
+              <div class="review__who">
+                <div class="review__ava" aria-hidden="true"></div>
+                <div>
+                  <div class="review__name">Алина</div>
+                  <div class="review__role">дизайнер → dev</div>
+                </div>
+              </div>
+              <div class="review__rate">★★★★★</div>
+            </div>
+            <p class="review__text">Очень кайфовое code-review: не “плохо”, а “вот почему” и “как лучше”.</p>
+          </article>
+
+          <article class="review">
+            <div class="review__top">
+              <div class="review__who">
+                <div class="review__ava" aria-hidden="true"></div>
+                <div>
+                  <div class="review__name">Данил</div>
+                  <div class="review__role">есть база</div>
+                </div>
+              </div>
+              <div class="review__rate">★★★★★</div>
+            </div>
+            <p class="review__text">Наконец понял компонентное мышление. Сделал проект, который реально не стыдно показать.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="h2">Стоимость: <span class="txt-grad">прозрачно</span> и без сюрпризов</h2>
+          <p class="sub">Выбирай по уровню поддержки. Всё остальное — одинаково сильное.</p>
+        </div>
+
+        <div class="pricing">
+          <article class="price">
+            <div class="price__head">
+              <div class="price__name">Base</div>
+              <div class="price__sum">19 900 ₽</div>
+              <div class="price__hint">для самостоятельных</div>
+            </div>
+            <ul class="price__list">
+              <li>12 недель материалов</li>
+              <li>домашки + автопроверки</li>
+              <li>2 групповых разбора</li>
+              <li>3 проекта по шаблону</li>
+            </ul>
+            <button class="btn btn--ghost btn--lg" data-modal="apply">Выбрать Base</button>
+          </article>
+
+          <article class="price price--main">
+            <div class="price__ribbon">Самый популярный</div>
+            <div class="price__head">
+              <div class="price__name">Pro</div>
+              <div class="price__sum">34 900 ₽</div>
+              <div class="price__hint">лучший баланс</div>
+            </div>
+            <ul class="price__list">
+              <li>всё из Base</li>
+              <li><b>еженедельный code-review</b></li>
+              <li>мини-группа и разборы</li>
+              <li>упаковка GitHub + портфолио</li>
+              <li>карьерный трек (чек-листы)</li>
+            </ul>
+            <button class="btn btn--primary btn--xl" data-modal="apply">Выбрать Pro</button>
+          </article>
+
+          <article class="price">
+            <div class="price__head">
+              <div class="price__name">Mentor+</div>
+              <div class="price__sum">59 900 ₽</div>
+              <div class="price__hint">максимум поддержки</div>
+            </div>
+            <ul class="price__list">
+              <li>всё из Pro</li>
+              <li><b>1:1 с ментором</b> (4 сессии)</li>
+              <li>разбор собеседований</li>
+              <li>план роста на 2 месяца</li>
+            </ul>
+            <button class="btn btn--ghost btn--lg" data-modal="apply">Выбрать Mentor+</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section section--dense">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="h2">FAQ: <span class="txt-outline">самые частые вопросы</span></h2>
+          <p class="sub">Коротко и честно. Так растёт доверие.</p>
+        </div>
+
+        <div class="faq">
+          <details class="qa">
+            <summary class="qa__q">Нужны ли знания программирования?</summary>
+            <div class="qa__a">
+              Нет. Нужна дисциплина. Мы даём структуру и поддержку, а сложность растёт постепенно.
+            </div>
+          </details>
+
+          <details class="qa">
+            <summary class="qa__q">Сколько времени в неделю нужно?</summary>
+            <div class="qa__a">В среднем 6–10 часов: уроки + практика + разборы.</div>
+          </details>
+
+          <details class="qa">
+            <summary class="qa__q">Будут ли реальные проекты?</summary>
+            <div class="qa__a">Да: лендинг, UI-kit и React-приложение — именно как портфолио.</div>
+          </details>
+
+          <details class="qa">
+            <summary class="qa__q">Можно ли оплатить частями?</summary>
+            <div class="qa__a">Да, есть рассрочка/частями — уточним в заявке.</div>
+          </details>
+
+          <details class="qa">
+            <summary class="qa__q">Что если я не успеваю?</summary>
+            <div class="qa__a">Можно догонять — материалы остаются, а ментор помогает с приоритетами.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final">
+      <div class="container final__inner">
+        <div class="final__left">
+          <h2 class="final__title">
+            Готов(а) к рывку?
+            <span class="txt-grad">Соберём твой первый сильный фронт-проект.</span>
+          </h2>
+          <p class="final__sub">
+            Оставь заявку — мы подберём поток и уровень поддержки. Без спама.
+          </p>
+
+          <div class="final__chips">
+            <span class="pill">Код-ревью</span>
+            <span class="pill">Портфолио</span>
+            <span class="pill">Карьерный трек</span>
+            <span class="pill pill--glow">Фокус на результате</span>
+          </div>
+        </div>
+
+        <div class="final__right">
+          <div class="applycard">
+            <div class="applycard__head">
+              <div class="applycard__title">Записаться на поток</div>
+              <div class="applycard__hint">Ответим быстро и по делу</div>
+            </div>
+
+            <form class="form" id="leadForm">
+              <label class="field">
+                <span class="field__label">Имя</span>
+                <input class="input" name="name" placeholder="Например, Гуль" />
+              </label>
+
+              <label class="field">
+                <span class="field__label">Телеграм или телефон</span>
+                <input class="input" name="contact" placeholder="@username или +7…" />
+              </label>
+
+              <label class="field">
+                <span class="field__label">Цель</span>
+                <select class="input" name="goal">
+                  <option>Хочу с нуля</option>
+                  <option>Есть база — нужен рывок</option>
+                  <option>Нужно портфолио и упаковка</option>
+                </select>
+              </label>
+
+              <button class="btn btn--primary btn--xl" type="submit">
+                Оставить заявку
+                <span class="btn__hint">без спама, честно</span>
+              </button>
+
+              <div class="form__fineprint">
+                Нажимая кнопку, ты соглашаешься на обработку данных (учебный макет).
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__left">
+          <div class="footer__brand">Frontend Sprint</div>
+          <div class="footer__small">Учебный рекламный лендинг • макет для практики</div>
+        </div>
+        <div class="footer__right">
+          <a class="f-link" href="#top">Наверх</a>
+          <a class="f-link" href="#pricing">Стоимость</a>
+          <a class="f-link" href="#faq">FAQ</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Modal -->
+  <dialog class="modal" id="modal">
+    <div class="modal__panel" role="document" aria-label="Окно">
+      <div class="modal__head">
+        <div class="modal__title" id="modalTitle">Заголовок</div>
+        <button class="iconbtn" id="modalClose" aria-label="Закрыть окно">✕</button>
+      </div>
+
+      <div class="modal__body" id="modalBody">
+        <!-- injected by JS -->
+      </div>
+    </div>
+  </dialog>
+
+  <script src="./app.js"></script>
+</body>
+</html>
