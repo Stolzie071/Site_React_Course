@@ -42,12 +42,16 @@ body { margin: 0; color: var(--txt); background: var(--bg); font-family: var(--f
 /* =========================
    BACKGROUND (neuro: figure/ground)
 ========================= */
+body { position: relative; } /* важно: чтобы фон растягивался по высоте body */
+
 .bg{
-  position: fixed;
-  inset: 0;
+  position: absolute;   /* было fixed */
+  inset: 0;             /* растягиваем на всю высоту страницы */
   z-index: -1;
   overflow: hidden;
+  pointer-events: none;
 }
+
 .bg__radial{
   position: absolute;
   filter: blur(60px);

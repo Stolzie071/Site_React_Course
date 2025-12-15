@@ -125,3 +125,19 @@ document.addEventListener("click", (e) => {
     alert("Это учебный макет: подключи реальный PDF/ссылку, когда будет готово.");
   }
 });
+
+// Ensure background covers full document height (useful for HTML-to-Design imports)
+function syncBgHeight() {
+  const bg = document.querySelector(".bg");
+  if (!bg) return;
+  const h = Math.max(
+    document.documentElement.scrollHeight,
+    document.body.scrollHeight,
+    document.documentElement.offsetHeight,
+    document.body.offsetHeight
+  );
+  bg.style.height = h + "px";
+}
+
+window.addEventListener("load", syncBgHeight);
+window.addEventListener("resize", syncBgHeight);
